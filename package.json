@@ -1,6 +1,14 @@
 {
   "name": "hangman",
   "private": true,
+  "version": "0.0.0",
+  "author": "arfa",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5"
+  },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "grunt": "^0.4.5",
@@ -35,6 +43,10 @@
     "phantomjs-prebuilt": "^2.1.5",
     "time-grunt": "^1.0.0"
   },
+  "bugs": {
+    "url": "https://github.com/arfa/Hangman/issues"
+  },
+  "homepage": "https://github.com/arfa/Hangman",
   "engines": {
     "node": ">=0.10.0"
   },
