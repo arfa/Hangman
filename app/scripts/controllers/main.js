@@ -8,11 +8,18 @@
  * Controller of the hangmanApp
  */
 angular.module('hangmanApp')
-    .controller('MainCtrl', function(lettersFilter, dictionaryProvider, _) {
+    .controller('MainCtrl', function(dictionaryProvider) {
 
         this.missesAllowed = dictionaryProvider.getMissesAllowed();
 
-        this.revealSecret = function() {
+        this.word = {value: dictionaryProvider.getRandomWord()};
+
+        this.getRandomWord = function () {
+        	this.word.value = dictionaryProvider.getRandomWord(); 
+        	console.log(this.word);
+        }
+
+        /*this.revealSecret = function() {
             _.each(this.secretWord, function(letter) {
                 letter.chosen = true;
             });
@@ -57,6 +64,6 @@ angular.module('hangmanApp')
             this.checkForEndOfGame();
         };
 
-        this.letters = lettersFilter('abcdefghijklmnopqrstuvwxyz');
+        this.letters = lettersFilter('abcdefghijklmnopqrstuvwxyz');*/
 
     });
