@@ -10,7 +10,7 @@
             <div class="letters">
                 <ul class="list-inline">
                     <li ng-repeat="letter in main.letters">
-                        <button class="btn btn-primary letter-button" ng-disabled="letter.chosen || main.lost || main.lost" ng-click="main.try(letter);">{{letter.name}}</button>
+                        <button class="btn btn-primary letter-button" ng-disabled="letter.chosen || main.lost || main.win" ng-click="main.try(letter);">{{letter.name}}</button>
                     </li>
                 </ul>
             </div>
