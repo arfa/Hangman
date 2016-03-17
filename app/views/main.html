@@ -2,24 +2,24 @@
     <div class="well">
         <div class="secretWord">
             <ul class="list-inline">
-                <li ng-repeat="letter in secretWord">
+                <li ng-repeat="letter in main.secretWord">
                     <span ng-hide="letter.chosen">_</span>
                     <span ng-show="letter.chosen">{{ letter.name }}</span>
                 </li>
             </ul>
             <div class="letters">
                 <ul class="list-inline">
-                    <li ng-repeat="letter in letters">
-                        <button class="btn btn-primary letter-button" ng-disabled="letter.chosen" ng-click="try(letter);">{{letter.name}}</button>
+                    <li ng-repeat="letter in main.letters">
+                        <button class="btn btn-primary letter-button" ng-disabled="letter.chosen || main.lost" ng-click="main.try(letter);">{{letter.name}}</button>
                     </li>
                 </ul>
             </div>
             <p>
-                <span ng-hide="win || lost">You have {{ missesAllowed - numMisses }} guesses remaining.</span>
-                <span ng-show="win">Well done!</span>
-                <span ng-show="lost">Sorry, please try again!</span>
+                <span ng-hide="main.win || main.lost">Il vous reste {{ main.missesAllowed - main.numMisses }} coups.</span>
+                <span ng-show="main.win">Bien joué!</span>
+                <span ng-show="main.lost">Vous avez perdu, essaiez encore une fois!</span>
             </p>
         </div>
     </div>
 </div>
-<button ng-click="reset();" class="btn btn-success btn-large">New Game</button>
+<button ng-click="main.reset();" class="btn btn-success btn-large">New Game</button>
