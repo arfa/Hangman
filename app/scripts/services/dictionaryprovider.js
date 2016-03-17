@@ -13,13 +13,7 @@ angular.module('hangmanApp')
     // Private variables
     var missesAllowed = 7;
 
-    var words = [
-      'Rails', 'AngularJS', 'Bootstrap', 'Ruby', 'JavaScript',
-      'authentication', 'function', 'array', 'object', 'sublime',
-      'github', 'agile', 'route', 'database', 'model', 'view',
-       'controller', 'terminal', 'array', 'data', 'inheritance',
-      'Heroku', 'scope',  'closure'
-    ];
+    var words = [];
 
     // Private constructor
     function Dictionary() {
@@ -32,15 +26,15 @@ angular.module('hangmanApp')
         return words[index];
       };
 
+      this.setWords = function (newwords) {
+        words = newwords.data;
+      };
+
     }
 
     // Public APIs for configuration
     this.setMissesAllowed = function (nb) {
       missesAllowed = nb;
-    };
-
-    this.setMissesAllowed = function (words) {
-      words = words;
     };
 
     // Method for instantiating

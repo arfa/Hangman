@@ -19,7 +19,15 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        resolve: {
+            words: function($http){
+                return $http({
+                  method: 'GET',
+                  url: 'words.json'
+               });
+            }
+        }
       })
       .otherwise({
         redirectTo: '/'
