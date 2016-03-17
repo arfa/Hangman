@@ -1,0 +1,13 @@
+{
+  "name": "Le jeu du pendu",
+  "description": "un simple test",
+  "keywords": [ "angular", "tutorial" ],
+  "repository": "https://github.com/arfa/Hangman",
+  "logo": "https://angularjs.org/img/AngularJS-large.png",
+  "website": "https://github.com/arfa/Hangman",
+  "success_url": "/",
+  "env" : {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+  }
+}
+

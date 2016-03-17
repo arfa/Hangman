@@ -1,3 +1,5 @@
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 # hangman
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
