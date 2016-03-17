@@ -57,6 +57,6 @@ angular.module('hangmanApp')
             this.checkForEndOfGame();
         };
 
-        this.letters = lettersFilter("abcdefghijklmnopqrstuvwxyz");
+        this.letters = lettersFilter('abcdefghijklmnopqrstuvwxyz');
 
     });
