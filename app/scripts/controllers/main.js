@@ -8,7 +8,7 @@
  * Controller of the hangmanApp
  */
 angular.module('hangmanApp')
-    .controller('MainCtrl', function(dictionaryProvider, words) {
+    .controller('MainCtrl', function(dictionaryProvider, words, $templateCache) {
 
     	dictionaryProvider.setWords(words);
 

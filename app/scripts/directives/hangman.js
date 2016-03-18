@@ -9,7 +9,7 @@
 angular.module('hangmanApp')
   .directive('hangman', function () {
     return {
-      templateUrl: 'scripts/directives/hangman.html',
+      templateUrl: 'views/hangman.html',
       restrict: 'E',
       scope: {
       	word: '=',
